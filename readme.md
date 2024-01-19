@@ -14,10 +14,13 @@
 
 bash
 ```py
-    pyinstaller --add-data "path/to/static/files;static" your_script.py
+    pyinstaller --add-data "path/to/static/files:static" your_script.py
 ```
 在这个例子中：
 
+```py
+    pyinstaller --add-data "web:web" your_script.py
+```
 path/to/static/files 是包含你的静态文件的目录。
 static 是你希望在打包后的可执行文件中的目标目录。
 通过这样的方式，PyInstaller将直接复制静态文件到打包后的目录，而不会进行编译。
